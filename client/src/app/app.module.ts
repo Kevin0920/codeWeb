@@ -5,23 +5,26 @@ import { AppRoutingModule } from './app-routing.module';
 import { MainService } from './main.service';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { CheckoutComponent } from './checkout/checkout.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms'; // <-- Import FormsModule
 import { HttpModule } from '@angular/http';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { CheckoutComponent } from './home/checkout/checkout.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    CheckoutComponent,
-    HomeComponent
+    HomeComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AngularFontAwesomeModule
   ],
   providers: [MainService],
   bootstrap: [AppComponent]
