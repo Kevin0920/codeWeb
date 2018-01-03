@@ -1,0 +1,31 @@
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" [routerLink]="['/']">Order Website</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+      </ul>
+      <a [routerLink]="['/new_user']" >
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit" *ngIf = "current_user != undefined && current_user.user_level == 9"><i class="fa fa-user-o fa-lg icon" aria-hidden="true"></i>Add New User </button>
+      </a>
+      <a [routerLink]="['/login']" >
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit" *ngIf = "current_user == undefined"><i class="fa fa-sign-in" aria-hidden="true"></i> Log in </button>
+      </a>
+      <button *ngIf="current_user != undefined" class="btn btn-danger" (click) = "logout()"><i class="fa fa-sign-out" aria-hidden="true"></i> Log out</button>
+
+    </div>
+
+  </div>
+</nav>

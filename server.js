@@ -1,5 +1,6 @@
 var express = require('express');
-var bcrypt=require("bcrypt-as-promised");
+var scrypt = require("scrypt");
+
 var bodyParser = require('body-parser');
 
 var path = require('path')
