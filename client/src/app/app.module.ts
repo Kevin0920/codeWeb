@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms'; // <-- Import FormsModule
 import { HttpModule } from '@angular/http';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { CheckoutComponent } from './home/checkout/checkout.component';
+import { NewMenuComponent } from './new-menu/new-menu.component';
+import { NewUserComponent } from './new-user/new-user.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { CheckoutComponent } from './home/checkout/checkout.component';
     AppComponent,
     LoginComponent,
     HomeComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    NewMenuComponent,
+    NewUserComponent
   ],
   imports: [
     BrowserModule,
