@@ -17,7 +17,7 @@
     "express-session": "^1.15.6",
     "jquery": "^3.2.1",
     "mongoose": "^4.13.2",
-    "scrypt": "^6.0.3",
-    "ngx-bootstrap": "^2.0.0-rc.0"
+    "ngx-bootstrap": "^2.0.0-rc.0",
+    "scrypt": "^6.0.3"
   }
 }

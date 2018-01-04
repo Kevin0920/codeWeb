@@ -57,6 +57,19 @@ export class MainService {
     )
   }
 
+  create_item(food,callback){
+    
+    this._http.post('/foods', food).subscribe(
+      (res) => {
+        console.log("from service create_item: ", res.json());
+        callback(res.json());
+      },
+      (err) => {
+        console.log("from service add_new error: ", err);
+      }
+    )
+  };
+
   logout() {
     localStorage.removeItem("user");
     
