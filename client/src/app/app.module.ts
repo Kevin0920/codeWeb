@@ -13,6 +13,7 @@ import { CheckoutComponent } from './home/checkout/checkout.component';
 import { NewMenuComponent } from './new-menu/new-menu.component';
 import { NewUserComponent } from './new-user/new-user.component';
 
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -28,8 +29,11 @@ import { NewUserComponent } from './new-user/new-user.component';
     AppRoutingModule,
     FormsModule,
     HttpModule,
-    AngularFontAwesomeModule
-  ],
+    AngularFontAwesomeModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAczVmRmbgieOqmTQksnkyRPh9Xq-qzkH4'
+    })
+    ],
   providers: [MainService],
   bootstrap: [AppComponent]
 })

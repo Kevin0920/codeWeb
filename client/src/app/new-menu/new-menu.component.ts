@@ -18,16 +18,21 @@ export class NewMenuComponent implements OnInit {
     image:null,
   };
     image;
-  logout(){
-    
-  }
+
+    picSize = false;
+    size;
+
 
   onFileChange(event) {
     let reader = new FileReader();
     if(event.target.files && event.target.files.length > 0) {
       console.log(event.target.files)
       let file = event.target.files[0];
-      this.new_food.image = file;
+      this.size = file.size;
+      console.log(file.size);
+      if (file.size <= 300000) {
+        this.picSize = true;
+      }
       reader.onload = () => {
         this.new_food.image = reader.result;
       };
@@ -38,7 +43,7 @@ export class NewMenuComponent implements OnInit {
   
   create(){
     this._service.create_item(this.new_food, (res)=>{
-      this.image = res[0].image;
+      this.image = res[1].image;
     })
   }
   ngOnInit() {

@@ -67,7 +67,16 @@
           <label for="exampleInputFile">File input</label>
           <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" (change)="onFileChange($event)" ngModel #imgfile="ngModel"  name="imgfile" accept=".png, .jpg, .jpeg">{{imgfile.errors | json}}
         </div>
-        <button type="submit" [disabled]="!formData3.valid" class="btn btn-info">Create</button>
+
+        <div class="alert alert-danger"
+        *ngIf="size >= 300000">
+          <strong>
+            Can't upload this image. check image size!!!
+          </strong>
+        </div>
+        
+        <button type="submit" [disabled]="!formData3.valid" class="btn btn-info"
+        *ngIf="picSize">Create</button>
       </fieldset>
     </form>
   </div>
